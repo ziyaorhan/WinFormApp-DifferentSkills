@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2020
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WFA_DifferentSkills", "WFA_DifferentSkills\WFA_DifferentSkills.csproj", "{76327F30-A77F-4A84-91B6-1C95197E137A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{76327F30-A77F-4A84-91B6-1C95197E137A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76327F30-A77F-4A84-91B6-1C95197E137A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76327F30-A77F-4A84-91B6-1C95197E137A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76327F30-A77F-4A84-91B6-1C95197E137A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2109DF1C-5333-4FA9-A7AE-46460BAE26A9}
+	EndGlobalSection
+EndGlobal
