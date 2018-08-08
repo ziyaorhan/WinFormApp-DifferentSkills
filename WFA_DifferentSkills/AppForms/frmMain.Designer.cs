@@ -34,12 +34,14 @@
             this.xMLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.jSONToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.wbMain = new System.Windows.Forms.WebBrowser();
+            this.createDbToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStripMain.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStripMain
             // 
             this.menuStripMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.createDbToolStripMenuItem,
             this.aPIToolStripMenuItem,
             this.xMLToolStripMenuItem,
             this.jSONToolStripMenuItem});
@@ -61,7 +63,7 @@
             // 
             this.githubApiToolStripMenuItem.BackColor = System.Drawing.SystemColors.Control;
             this.githubApiToolStripMenuItem.Name = "githubApiToolStripMenuItem";
-            this.githubApiToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.githubApiToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.githubApiToolStripMenuItem.Text = "Github Api";
             this.githubApiToolStripMenuItem.Click += new System.EventHandler(this.githubApiToolStripMenuItem_Click);
             this.githubApiToolStripMenuItem.MouseEnter += new System.EventHandler(this.githubApiToolStripMenuItem_MouseEnter);
@@ -87,6 +89,15 @@
             this.wbMain.Name = "wbMain";
             this.wbMain.Size = new System.Drawing.Size(415, 470);
             this.wbMain.TabIndex = 2;
+            // 
+            // createDbToolStripMenuItem
+            // 
+            this.createDbToolStripMenuItem.Name = "createDbToolStripMenuItem";
+            this.createDbToolStripMenuItem.Size = new System.Drawing.Size(90, 20);
+            this.createDbToolStripMenuItem.Text = "1-CREATE DB";
+            this.createDbToolStripMenuItem.Click += new System.EventHandler(this.createDbToolStripMenuItem_Click);
+            this.createDbToolStripMenuItem.MouseEnter += new System.EventHandler(this.createDbToolStripMenuItem_MouseEnter);
+            this.createDbToolStripMenuItem.MouseLeave += new System.EventHandler(this.createDbToolStripMenuItem_MouseLeave);
             // 
             // frmMain
             // 
@@ -117,5 +128,6 @@
         private System.Windows.Forms.ToolStripMenuItem githubApiToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem xMLToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem jSONToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem createDbToolStripMenuItem;
     }
 }

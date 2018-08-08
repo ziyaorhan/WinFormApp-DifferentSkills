@@ -43,6 +43,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -55,9 +56,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppClasses\DatabaseOperations.cs" />
     <Compile Include="AppClasses\GithubUserForJson.cs" />
     <Compile Include="AppClasses\Global.cs" />
     <Compile Include="AppClasses\GithubRepoForJson.cs" />
+    <Compile Include="AppClasses\Validation.cs" />
+    <Compile Include="AppForms\frmDbCreator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForms\frmDbCreator.Designer.cs">
+      <DependentUpon>frmDbCreator.cs</DependentUpon>
+    </Compile>
     <Compile Include="AppForms\frmGithubApi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +90,9 @@
     <Compile Include="ORM\Manager\DatabaseContext.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AppForms\frmDbCreator.resx">
+      <DependentUpon>frmDbCreator.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AppForms\frmGithubApi.resx">
       <DependentUpon>frmGithubApi.cs</DependentUpon>
     </EmbeddedResource>
@@ -111,7 +123,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Files\Image\" />
@@ -120,8 +134,10 @@
     <Folder Include="Files\XML\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Files\Descriptions\frmDbCreator.html" />
     <Content Include="Files\Descriptions\frmGithubApi.html" />
     <Content Include="Files\Descriptions\frmGithubApi_files\github.png" />
+    <Content Include="Files\SqlScript\Northwind.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -30,22 +30,16 @@ namespace WFA_DifferentSkills.AppForms
         public frmGithubApi(frmMain parent)
         {
             InitializeComponent();
+            //for initial
             this.MdiParent = parent;
             this.Text = "Github Api";
             Global.WebBrowserFill("frmGithubApi.html", this.wbDescription);
-            Global.openForms.Add(this.Name.ToString());
-            //Global.showForm = false;
         }
 
+        #region Initial Methods
         private void frmGithubApi_Load(object sender, EventArgs e)
         {
-            int counter = 0;
-            foreach (string item in Global.openForms)
-            {
-                if (Global.openForms.Contains(this.Name.ToString()))
-                    counter++;
-            }
-            if (counter > 1)
+            if (Validation.IsOpenForm(this))
                 this.Close();
         }
 
@@ -54,6 +48,7 @@ namespace WFA_DifferentSkills.AppForms
             Global.wbMainVisibility = true;
             Global.openForms.Remove(this.Name.ToString());
         }
+        #endregion
 
         private void btnQuery_Click(object sender, EventArgs e)
         {

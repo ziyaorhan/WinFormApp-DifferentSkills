@@ -1,11 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+//using System.Collections.Generic;
+//using System.ComponentModel;
+//using System.Data;
+//using System.Drawing;
+//using System.Linq;
+//using System.Text;
+//using System.Threading.Tasks;
 using System.Windows.Forms;
 using WFA_DifferentSkills.AppClasses;
 
@@ -48,15 +48,40 @@ namespace WFA_DifferentSkills.AppForms
 
         private void githubApiToolStripMenuItem_MouseLeave(object sender, EventArgs e)
         {
-            this.wbMain.Visible = false;
+                this.wbMain.Visible = false;
         }
 
         private void githubApiToolStripMenuItem_Click(object sender, EventArgs e)
         {
-                frmGithubApi child = new frmGithubApi(this);
-                child.Show();
-                Global.wbMainVisibility = false;              
+            frmGithubApi child = new frmGithubApi(this);
+            child.Show();
+            Global.wbMainVisibility = false;
+           this. wbMain.Visible = false;
         }
+        #endregion
+
+        #region createDBToolStripMenuItem methods
+        private void createDbToolStripMenuItem_MouseEnter(object sender, EventArgs e)
+        {
+            if (Global.wbMainVisibility)
+            {
+                Global.WebBrowserFill("frmDbCreator.html", this.wbMain);
+                this.wbMain.Visible = true;
+            }
+        }
+
+        private void createDbToolStripMenuItem_MouseLeave(object sender, EventArgs e)
+        {
+                this.wbMain.Visible = false;     
+        }
+
+        private void createDbToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmDbCreator child = new frmDbCreator(this);
+            child.Show();
+            Global.wbMainVisibility = false;
+            wbMain.Visible = false;
+        } 
         #endregion
     }
 }
