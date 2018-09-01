@@ -54,8 +54,8 @@
             // createDbToolStripMenuItem
             // 
             this.createDbToolStripMenuItem.Name = "createDbToolStripMenuItem";
-            this.createDbToolStripMenuItem.Size = new System.Drawing.Size(90, 20);
-            this.createDbToolStripMenuItem.Text = "1-CREATE DB";
+            this.createDbToolStripMenuItem.Size = new System.Drawing.Size(79, 20);
+            this.createDbToolStripMenuItem.Text = "CREATE DB";
             this.createDbToolStripMenuItem.Click += new System.EventHandler(this.createDbToolStripMenuItem_Click);
             this.createDbToolStripMenuItem.MouseEnter += new System.EventHandler(this.createDbToolStripMenuItem_MouseEnter);
             this.createDbToolStripMenuItem.MouseLeave += new System.EventHandler(this.createDbToolStripMenuItem_MouseLeave);
@@ -72,7 +72,7 @@
             // 
             this.githubApiToolStripMenuItem.BackColor = System.Drawing.SystemColors.Control;
             this.githubApiToolStripMenuItem.Name = "githubApiToolStripMenuItem";
-            this.githubApiToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
+            this.githubApiToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.githubApiToolStripMenuItem.Text = "Github Api";
             this.githubApiToolStripMenuItem.Click += new System.EventHandler(this.githubApiToolStripMenuItem_Click);
             this.githubApiToolStripMenuItem.MouseEnter += new System.EventHandler(this.githubApiToolStripMenuItem_MouseEnter);

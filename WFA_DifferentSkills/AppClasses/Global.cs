@@ -37,9 +37,9 @@ namespace WFA_DifferentSkills.AppClasses
         /// This method converts serialize data to deserialize.
         /// </summary>
         /// <typeparam name="T">This type parameter represent a model or generic list and return them.</typeparam>
-        /// <param name="url">This parameter represent the way of serialize json data</param>
+        /// <param name="webUrl">This parameter represent the way of serialize json data</param>
         /// <returns></returns>
-        public static T GetDeserializeJson<T>(string url) where T : new()
+        public static T GetDeserializeJson<T>(string webUrl) where T : new()
         {
             using (var w = new WebClient())
             {
@@ -47,7 +47,7 @@ namespace WFA_DifferentSkills.AppClasses
 
                 try
                 {
-                    var webRequest = WebRequest.Create(url) as HttpWebRequest;
+                    var webRequest = WebRequest.Create(webUrl) as HttpWebRequest;
                     if (webRequest != null)
                     {
                         webRequest.ContentType = "application/json";
