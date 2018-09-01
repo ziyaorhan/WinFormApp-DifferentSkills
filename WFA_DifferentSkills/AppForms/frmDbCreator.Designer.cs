@@ -51,10 +51,14 @@
             this.gb1 = new System.Windows.Forms.GroupBox();
             this.btnEnd = new System.Windows.Forms.Button();
             this.wbDescription = new System.Windows.Forms.WebBrowser();
+            this.dgvCodeFirstValidation = new System.Windows.Forms.DataGridView();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvErrorCmd)).BeginInit();
             this.gb3.SuspendLayout();
             this.gb2.SuspendLayout();
             this.gb1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCodeFirstValidation)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnStart
@@ -62,18 +66,18 @@
             this.btnStart.BackColor = System.Drawing.Color.White;
             this.btnStart.FlatAppearance.BorderSize = 0;
             this.btnStart.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnStart.Location = new System.Drawing.Point(585, 379);
+            this.btnStart.Location = new System.Drawing.Point(589, 453);
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(97, 26);
             this.btnStart.TabIndex = 0;
-            this.btnStart.Text = "Kuruluma Başla";
+            this.btnStart.Text = "Create DB";
             this.btnStart.UseVisualStyleBackColor = false;
             this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 
             // rbDefault
             // 
             this.rbDefault.AutoSize = true;
-            this.rbDefault.Location = new System.Drawing.Point(22, 19);
+            this.rbDefault.Location = new System.Drawing.Point(22, 10);
             this.rbDefault.Name = "rbDefault";
             this.rbDefault.Size = new System.Drawing.Size(76, 17);
             this.rbDefault.TabIndex = 1;
@@ -85,39 +89,39 @@
             // rbCustomize
             // 
             this.rbCustomize.AutoSize = true;
-            this.rbCustomize.Location = new System.Drawing.Point(113, 19);
+            this.rbCustomize.Location = new System.Drawing.Point(113, 10);
             this.rbCustomize.Name = "rbCustomize";
-            this.rbCustomize.Size = new System.Drawing.Size(49, 17);
+            this.rbCustomize.Size = new System.Drawing.Size(60, 17);
             this.rbCustomize.TabIndex = 1;
             this.rbCustomize.TabStop = true;
-            this.rbCustomize.Text = "Özel ";
+            this.rbCustomize.Text = "Custom";
             this.rbCustomize.UseVisualStyleBackColor = false;
             this.rbCustomize.CheckedChanged += new System.EventHandler(this.rbCustomize_CheckedChanged);
             // 
             // txtServer
             // 
-            this.txtServer.Location = new System.Drawing.Point(96, 27);
+            this.txtServer.Location = new System.Drawing.Point(96, 15);
             this.txtServer.Name = "txtServer";
             this.txtServer.Size = new System.Drawing.Size(143, 20);
             this.txtServer.TabIndex = 2;
             // 
             // txtDatabase
             // 
-            this.txtDatabase.Location = new System.Drawing.Point(96, 53);
+            this.txtDatabase.Location = new System.Drawing.Point(96, 41);
             this.txtDatabase.Name = "txtDatabase";
             this.txtDatabase.Size = new System.Drawing.Size(143, 20);
             this.txtDatabase.TabIndex = 2;
             // 
             // txtUserId
             // 
-            this.txtUserId.Location = new System.Drawing.Point(96, 79);
+            this.txtUserId.Location = new System.Drawing.Point(96, 67);
             this.txtUserId.Name = "txtUserId";
             this.txtUserId.Size = new System.Drawing.Size(143, 20);
             this.txtUserId.TabIndex = 2;
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(96, 105);
+            this.txtPassword.Location = new System.Drawing.Point(96, 93);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(143, 20);
             this.txtPassword.TabIndex = 2;
@@ -125,7 +129,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(22, 30);
+            this.label1.Location = new System.Drawing.Point(22, 18);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(70, 13);
             this.label1.TabIndex = 3;
@@ -134,7 +138,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(19, 56);
+            this.label2.Location = new System.Drawing.Point(19, 44);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(73, 13);
             this.label2.TabIndex = 3;
@@ -143,7 +147,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(46, 83);
+            this.label3.Location = new System.Drawing.Point(46, 71);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(46, 13);
             this.label3.TabIndex = 3;
@@ -152,7 +156,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(36, 109);
+            this.label4.Location = new System.Drawing.Point(36, 97);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(56, 13);
             this.label4.TabIndex = 3;
@@ -171,7 +175,7 @@
             // txtStatus
             // 
             this.txtStatus.Enabled = false;
-            this.txtStatus.Location = new System.Drawing.Point(44, 14);
+            this.txtStatus.Location = new System.Drawing.Point(42, 14);
             this.txtStatus.Name = "txtStatus";
             this.txtStatus.Size = new System.Drawing.Size(99, 20);
             this.txtStatus.TabIndex = 6;
@@ -181,23 +185,23 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(3, 17);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(41, 13);
+            this.label5.Size = new System.Drawing.Size(40, 13);
             this.label5.TabIndex = 3;
-            this.label5.Text = "Durum:";
+            this.label5.Text = "Status:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(143, 17);
+            this.label6.Location = new System.Drawing.Point(141, 17);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(77, 13);
+            this.label6.Size = new System.Drawing.Size(78, 13);
             this.label6.TabIndex = 3;
-            this.label6.Text = "Derlenen Satır:";
+            this.label6.Text = "Executed Line:";
             // 
             // txtExecuted
             // 
             this.txtExecuted.Enabled = false;
-            this.txtExecuted.Location = new System.Drawing.Point(217, 13);
+            this.txtExecuted.Location = new System.Drawing.Point(216, 13);
             this.txtExecuted.Name = "txtExecuted";
             this.txtExecuted.Size = new System.Drawing.Size(46, 20);
             this.txtExecuted.TabIndex = 6;
@@ -205,18 +209,18 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(264, 17);
+            this.label7.Location = new System.Drawing.Point(260, 17);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(76, 13);
+            this.label7.Size = new System.Drawing.Size(91, 13);
             this.label7.TabIndex = 3;
-            this.label7.Text = "Problemli Satır:";
+            this.label7.Text = "Unexecuted Line:";
             // 
             // txtUnExec
             // 
             this.txtUnExec.Enabled = false;
-            this.txtUnExec.Location = new System.Drawing.Point(337, 14);
+            this.txtUnExec.Location = new System.Drawing.Point(348, 14);
             this.txtUnExec.Name = "txtUnExec";
-            this.txtUnExec.Size = new System.Drawing.Size(46, 20);
+            this.txtUnExec.Size = new System.Drawing.Size(35, 20);
             this.txtUnExec.TabIndex = 6;
             // 
             // gb3
@@ -228,12 +232,12 @@
             this.gb3.Controls.Add(this.label6);
             this.gb3.Controls.Add(this.txtStatus);
             this.gb3.Controls.Add(this.label7);
-            this.gb3.Location = new System.Drawing.Point(395, 222);
+            this.gb3.Location = new System.Drawing.Point(395, 176);
             this.gb3.Name = "gb3";
             this.gb3.Size = new System.Drawing.Size(390, 144);
             this.gb3.TabIndex = 7;
             this.gb3.TabStop = false;
-            this.gb3.Text = "-SONUÇ-";
+            this.gb3.Text = "-Sql File Execute Result-";
             // 
             // gb2
             // 
@@ -245,9 +249,9 @@
             this.gb2.Controls.Add(this.label3);
             this.gb2.Controls.Add(this.label1);
             this.gb2.Controls.Add(this.label2);
-            this.gb2.Location = new System.Drawing.Point(395, 68);
+            this.gb2.Location = new System.Drawing.Point(395, 47);
             this.gb2.Name = "gb2";
-            this.gb2.Size = new System.Drawing.Size(390, 145);
+            this.gb2.Size = new System.Drawing.Size(390, 123);
             this.gb2.TabIndex = 8;
             this.gb2.TabStop = false;
             this.gb2.Text = "-2-";
@@ -258,7 +262,7 @@
             this.gb1.Controls.Add(this.rbDefault);
             this.gb1.Location = new System.Drawing.Point(395, 6);
             this.gb1.Name = "gb1";
-            this.gb1.Size = new System.Drawing.Size(390, 53);
+            this.gb1.Size = new System.Drawing.Size(390, 35);
             this.gb1.TabIndex = 9;
             this.gb1.TabStop = false;
             this.gb1.Text = "-1-";
@@ -268,11 +272,11 @@
             this.btnEnd.BackColor = System.Drawing.Color.White;
             this.btnEnd.FlatAppearance.BorderSize = 0;
             this.btnEnd.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnEnd.Location = new System.Drawing.Point(688, 379);
+            this.btnEnd.Location = new System.Drawing.Point(692, 453);
             this.btnEnd.Name = "btnEnd";
             this.btnEnd.Size = new System.Drawing.Size(97, 26);
             this.btnEnd.TabIndex = 10;
-            this.btnEnd.Text = "Tamam";
+            this.btnEnd.Text = "Completed";
             this.btnEnd.UseVisualStyleBackColor = false;
             this.btnEnd.Click += new System.EventHandler(this.btnEnd_Click);
             // 
@@ -282,8 +286,27 @@
             this.wbDescription.Location = new System.Drawing.Point(0, 0);
             this.wbDescription.MinimumSize = new System.Drawing.Size(20, 20);
             this.wbDescription.Name = "wbDescription";
-            this.wbDescription.Size = new System.Drawing.Size(385, 417);
+            this.wbDescription.Size = new System.Drawing.Size(385, 486);
             this.wbDescription.TabIndex = 11;
+            // 
+            // dgvCodeFirstValidation
+            // 
+            this.dgvCodeFirstValidation.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCodeFirstValidation.Location = new System.Drawing.Point(6, 19);
+            this.dgvCodeFirstValidation.Name = "dgvCodeFirstValidation";
+            this.dgvCodeFirstValidation.RowHeadersWidth = 20;
+            this.dgvCodeFirstValidation.Size = new System.Drawing.Size(377, 87);
+            this.dgvCodeFirstValidation.TabIndex = 12;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.dgvCodeFirstValidation);
+            this.groupBox1.Location = new System.Drawing.Point(395, 326);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(394, 112);
+            this.groupBox1.TabIndex = 13;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "-Code First Execute Result-";
             // 
             // frmDbCreator
             // 
@@ -291,7 +314,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.ClientSize = new System.Drawing.Size(795, 417);
+            this.ClientSize = new System.Drawing.Size(800, 486);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.wbDescription);
             this.Controls.Add(this.btnEnd);
             this.Controls.Add(this.gb1);
@@ -312,6 +336,8 @@
             this.gb2.PerformLayout();
             this.gb1.ResumeLayout(false);
             this.gb1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCodeFirstValidation)).EndInit();
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -341,5 +367,7 @@
         private System.Windows.Forms.GroupBox gb1;
         private System.Windows.Forms.Button btnEnd;
         private System.Windows.Forms.WebBrowser wbDescription;
+        private System.Windows.Forms.DataGridView dgvCodeFirstValidation;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

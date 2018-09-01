@@ -52,7 +52,7 @@ namespace WFA_DifferentSkills.AppClasses
         //public string labels_url { get; set; }
         //public string releases_url { get; set; }
         //public string deployments_url { get; set; }
-        public string created_at { get; set; }
+        public DateTime created_at { get; set; }
         // public string updated_at { get; set; }
         //public string pushed_at { get; set; }
         //public string git_url { get; set; }

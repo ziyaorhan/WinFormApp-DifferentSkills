@@ -81,6 +81,54 @@ namespace WFA_DifferentSkills.AppForms
             child.Show();
             Global.wbMainVisibility = false;
             wbMain.Visible = false;
+        }
+        #endregion
+
+        #region xmlToolStripMenuItem methods
+        private void xMLToolStripMenuItem_MouseEnter(object sender, EventArgs e)
+        {
+            if (Global.wbMainVisibility)
+            {
+                Global.WebBrowserFill("", this.wbMain);
+                this.wbMain.Visible = true;
+            }
+        }
+
+        private void xMLToolStripMenuItem_MouseLeave(object sender, EventArgs e)
+        {
+            this.wbMain.Visible = false;
+        }
+
+        private void xMLToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmXmlSkills child = new frmXmlSkills(this);
+            child.Show();
+            Global.wbMainVisibility = false;
+            wbMain.Visible = false;
+        }
+        #endregion
+
+        #region jSONToolStripMenuItem methods
+        private void jSONToolStripMenuItem_MouseEnter(object sender, EventArgs e)
+        {
+            if (Global.wbMainVisibility)
+            {
+                Global.WebBrowserFill("", this.wbMain);
+                this.wbMain.Visible = true;
+            }
+        }
+
+        private void jSONToolStripMenuItem_MouseLeave(object sender, EventArgs e)
+        {
+            this.wbMain.Visible = false;
+        }
+
+        private void jSONToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmJsonSkills child = new frmJsonSkills(this);
+            child.Show();
+            Global.wbMainVisibility = false;
+            wbMain.Visible = false;
         } 
         #endregion
     }

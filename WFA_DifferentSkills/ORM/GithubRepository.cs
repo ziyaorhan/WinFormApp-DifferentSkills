@@ -16,8 +16,8 @@ namespace WFA_DifferentSkills.ORM
         public int Id { get; set; }
         [StringLength(250),Required]
         public string FullName { get; set; }
-        [StringLength(25),Required]
-        public string CreatedAt { get; set; }
+
+        public DateTime CreatedAt { get; set; }
         [StringLength(250)]
         public string DownloadUrl { get; set; }
         public GithubUser User { get; set; }

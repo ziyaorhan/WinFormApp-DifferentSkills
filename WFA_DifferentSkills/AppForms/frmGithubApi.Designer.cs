@@ -93,7 +93,7 @@
             this.gbRepoInfo.Size = new System.Drawing.Size(594, 272);
             this.gbRepoInfo.TabIndex = 14;
             this.gbRepoInfo.TabStop = false;
-            this.gbRepoInfo.Text = "Kullanıcı Repoları";
+            this.gbRepoInfo.Text = "-Repositories-";
             // 
             // dgvRepos
             // 
@@ -181,29 +181,29 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label4.ForeColor = System.Drawing.Color.Gray;
-            this.label4.Location = new System.Drawing.Point(138, 94);
+            this.label4.Location = new System.Drawing.Point(152, 94);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(103, 17);
+            this.label4.Size = new System.Drawing.Size(80, 17);
             this.label4.TabIndex = 2;
-            this.label4.Text = "Takip Edilen:";
+            this.label4.Text = "Following:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label3.ForeColor = System.Drawing.Color.Gray;
-            this.label3.Location = new System.Drawing.Point(176, 68);
+            this.label3.Location = new System.Drawing.Point(151, 68);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(65, 17);
+            this.label3.Size = new System.Drawing.Size(81, 17);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Takipçi:";
+            this.label3.Text = "Followers:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label2.ForeColor = System.Drawing.Color.Gray;
-            this.label2.Location = new System.Drawing.Point(154, 42);
+            this.label2.Location = new System.Drawing.Point(145, 42);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(87, 17);
             this.label2.TabIndex = 2;
@@ -216,12 +216,14 @@
             this.label1.ForeColor = System.Drawing.Color.Gray;
             this.label1.Location = new System.Drawing.Point(139, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(102, 17);
+            this.label1.Size = new System.Drawing.Size(93, 17);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Kullanıcı Adı:";
+            this.label1.Text = "User Name:";
             // 
             // pbResim
             // 
+            this.pbResim.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbResim.InitialImage = null;
             this.pbResim.Location = new System.Drawing.Point(13, 17);
             this.pbResim.Name = "pbResim";
             this.pbResim.Size = new System.Drawing.Size(100, 94);
@@ -255,7 +257,7 @@
             this.btnQuery.Name = "btnQuery";
             this.btnQuery.Size = new System.Drawing.Size(111, 27);
             this.btnQuery.TabIndex = 1;
-            this.btnQuery.Text = "SORGULA";
+            this.btnQuery.Text = "SEARCH";
             this.btnQuery.UseVisualStyleBackColor = false;
             this.btnQuery.Click += new System.EventHandler(this.btnQuery_Click);
             // 
@@ -266,18 +268,18 @@
             this.label5.ForeColor = System.Drawing.Color.Gray;
             this.label5.Location = new System.Drawing.Point(9, 17);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(223, 18);
+            this.label5.Size = new System.Drawing.Size(157, 18);
             this.label5.TabIndex = 6;
-            this.label5.Text = "Github \"Login Name\" Giriniz:";
+            this.label5.Text = "Github Login Name:";
             // 
             // txtSearch
             // 
             this.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtSearch.Location = new System.Drawing.Point(238, 14);
+            this.txtSearch.Location = new System.Drawing.Point(172, 14);
             this.txtSearch.Multiline = true;
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(212, 27);
+            this.txtSearch.Size = new System.Drawing.Size(278, 27);
             this.txtSearch.TabIndex = 0;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 

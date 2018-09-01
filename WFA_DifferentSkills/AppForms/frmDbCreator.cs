@@ -181,7 +181,7 @@ namespace WFA_DifferentSkills.AppForms
 
             if (!String.IsNullOrEmpty(DatabaseOperations.GetConnStrFromAppConfig()))
             {
-                StatusOfExecutedSqlCmd status = DatabaseOperations.DBExecutorFromSqlFile(DatabaseOperations.GetConnStrFromAppConfig(), "Northwind", txtDatabase.Text.Trim());
+                StatusOfExecutedSqlCmd status = DatabaseOperations.DBExecutorFromSqlFile(DatabaseOperations.GetConnStrFromAppConfig(), "Northwind.sql", txtDatabase.Text.Trim());
                 //area of status info 
                 if (status != null)
                 {
@@ -189,14 +189,21 @@ namespace WFA_DifferentSkills.AppForms
                     txtExecuted.Text = status.ExecutedCmdCount.ToString();
                     txtUnExec.Text = status.UnexecutedCmdCount.ToString();
                     dgvErrorCmd.DataSource = status.PrbSqlCmdLst.ToList();
-                    dgvErrorCmd.Columns["LineNoByPaternOrder"].Width = 27;
-                    dgvErrorCmd.Columns["SqlExpression"].Width = 330;
-                    dgvErrorCmd.Columns["LineNoByPaternOrder"].HeaderText = "GO No:";
-                    dgvErrorCmd.Columns["SqlExpression"].HeaderText = "Execute Edilemeyen Sql İfade:";
+                    dgvErrorCmd.Columns["LineNoByPaternOrder"].Width = 67;
+                    dgvErrorCmd.Columns["SqlExpression"].Width = 290;
+                    dgvErrorCmd.Columns["SqlFileName"].HeaderText = "Sql File Name:";
+                    dgvErrorCmd.Columns["LineNoByPaternOrder"].HeaderText = "GO Nu:";
+                    dgvErrorCmd.Columns["SqlExpression"].HeaderText = "Unexecuted Sql Expression:";
 
-                    //Execute other db
-                    DatabaseContext context = new DatabaseContext();
-                    var db = context.GithubUser.ToList();
+                    //Execute other table by code first
+                    List<StatusOfExecCodeFirst> isSuccessList = new List<StatusOfExecCodeFirst>();
+                    //For Github Api Project
+                    DatabaseContext ctx = new DatabaseContext();
+                    StatusOfExecCodeFirst isSuccess=DatabaseOperations.CodeFirstExecFromMngr(ctx,"Select * From GithubUser","DatabaseContext");              
+                    isSuccessList.Add(isSuccess);
+                    dgvCodeFirstValidation.DataSource = isSuccessList;
+                    dgvCodeFirstValidation.Columns["ContextName"].Width = 97;
+                    dgvCodeFirstValidation.Columns["IsSuccess"].Width = 260;
                 }
             }
         }

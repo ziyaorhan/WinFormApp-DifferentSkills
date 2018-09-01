@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.menuStripMain = new System.Windows.Forms.MenuStrip();
+            this.createDbToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aPIToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.githubApiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.xMLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.jSONToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.wbMain = new System.Windows.Forms.WebBrowser();
-            this.createDbToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStripMain.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,6 +51,15 @@
             this.menuStripMain.TabIndex = 1;
             this.menuStripMain.Text = "menuStrip1";
             // 
+            // createDbToolStripMenuItem
+            // 
+            this.createDbToolStripMenuItem.Name = "createDbToolStripMenuItem";
+            this.createDbToolStripMenuItem.Size = new System.Drawing.Size(90, 20);
+            this.createDbToolStripMenuItem.Text = "1-CREATE DB";
+            this.createDbToolStripMenuItem.Click += new System.EventHandler(this.createDbToolStripMenuItem_Click);
+            this.createDbToolStripMenuItem.MouseEnter += new System.EventHandler(this.createDbToolStripMenuItem_MouseEnter);
+            this.createDbToolStripMenuItem.MouseLeave += new System.EventHandler(this.createDbToolStripMenuItem_MouseLeave);
+            // 
             // aPIToolStripMenuItem
             // 
             this.aPIToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -63,7 +72,7 @@
             // 
             this.githubApiToolStripMenuItem.BackColor = System.Drawing.SystemColors.Control;
             this.githubApiToolStripMenuItem.Name = "githubApiToolStripMenuItem";
-            this.githubApiToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.githubApiToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
             this.githubApiToolStripMenuItem.Text = "Github Api";
             this.githubApiToolStripMenuItem.Click += new System.EventHandler(this.githubApiToolStripMenuItem_Click);
             this.githubApiToolStripMenuItem.MouseEnter += new System.EventHandler(this.githubApiToolStripMenuItem_MouseEnter);
@@ -72,14 +81,20 @@
             // xMLToolStripMenuItem
             // 
             this.xMLToolStripMenuItem.Name = "xMLToolStripMenuItem";
-            this.xMLToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
-            this.xMLToolStripMenuItem.Text = "XML";
+            this.xMLToolStripMenuItem.Size = new System.Drawing.Size(117, 20);
+            this.xMLToolStripMenuItem.Text = "XML OPERATIONS";
+            this.xMLToolStripMenuItem.Click += new System.EventHandler(this.xMLToolStripMenuItem_Click);
+            this.xMLToolStripMenuItem.MouseEnter += new System.EventHandler(this.xMLToolStripMenuItem_MouseEnter);
+            this.xMLToolStripMenuItem.MouseLeave += new System.EventHandler(this.xMLToolStripMenuItem_MouseLeave);
             // 
             // jSONToolStripMenuItem
             // 
             this.jSONToolStripMenuItem.Name = "jSONToolStripMenuItem";
-            this.jSONToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
-            this.jSONToolStripMenuItem.Text = "JSON";
+            this.jSONToolStripMenuItem.Size = new System.Drawing.Size(121, 20);
+            this.jSONToolStripMenuItem.Text = "JSON OPERATIONS";
+            this.jSONToolStripMenuItem.Click += new System.EventHandler(this.jSONToolStripMenuItem_Click);
+            this.jSONToolStripMenuItem.MouseEnter += new System.EventHandler(this.jSONToolStripMenuItem_MouseEnter);
+            this.jSONToolStripMenuItem.MouseLeave += new System.EventHandler(this.jSONToolStripMenuItem_MouseLeave);
             // 
             // wbMain
             // 
@@ -89,15 +104,6 @@
             this.wbMain.Name = "wbMain";
             this.wbMain.Size = new System.Drawing.Size(415, 470);
             this.wbMain.TabIndex = 2;
-            // 
-            // createDbToolStripMenuItem
-            // 
-            this.createDbToolStripMenuItem.Name = "createDbToolStripMenuItem";
-            this.createDbToolStripMenuItem.Size = new System.Drawing.Size(90, 20);
-            this.createDbToolStripMenuItem.Text = "1-CREATE DB";
-            this.createDbToolStripMenuItem.Click += new System.EventHandler(this.createDbToolStripMenuItem_Click);
-            this.createDbToolStripMenuItem.MouseEnter += new System.EventHandler(this.createDbToolStripMenuItem_MouseEnter);
-            this.createDbToolStripMenuItem.MouseLeave += new System.EventHandler(this.createDbToolStripMenuItem_MouseLeave);
             // 
             // frmMain
             // 

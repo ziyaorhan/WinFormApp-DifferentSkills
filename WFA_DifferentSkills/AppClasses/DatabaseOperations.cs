@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Configuration;
+using System.Data.Entity;
 using System.Data.SqlClient;
 using System.IO;
 using System.Linq;
@@ -9,6 +11,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
+using WFA_DifferentSkills.ORM.Manager;
 
 namespace WFA_DifferentSkills.AppClasses
 {
@@ -36,12 +39,11 @@ namespace WFA_DifferentSkills.AppClasses
             builder.InitialCatalog = initialCatalog;
             return builder.ConnectionString;
         }
-        
+
         public static string GetConnStrFromAppConfig()
         {
             string returnValue = null;
-            DirectoryInfo projectBinFolder = Directory.GetParent(System.Windows.Forms.Application.StartupPath);
-            string appConfigFilePath = projectBinFolder.Parent.FullName + "\\App.config";
+            string appConfigFilePath = Global.GetPath("\\App.config");
             XmlDocument xDoc = new XmlDocument();
             xDoc.Load(appConfigFilePath);
             foreach (XmlNode rootNode in xDoc.ChildNodes)// 1-xml ve 2-configuration
@@ -69,8 +71,7 @@ namespace WFA_DifferentSkills.AppClasses
         public static bool UpdateConnStrInAppConfig(string modifyConnStr)
         {
             bool status = false;
-            DirectoryInfo projectBinFolder = Directory.GetParent(System.Windows.Forms.Application.StartupPath);
-            string appConfigFilePath = projectBinFolder.Parent.FullName + "\\App.config";
+            string appConfigFilePath = Global.GetPath("\\App.config");
             XmlDocument xDoc = new XmlDocument();
             xDoc.Load(appConfigFilePath);
             foreach (XmlNode rootNode in xDoc.ChildNodes)// 1-xml ve 2-configuration
@@ -157,15 +158,14 @@ namespace WFA_DifferentSkills.AppClasses
             return returnValue;
         }
 
-        public static StatusOfExecutedSqlCmd DBExecutorFromSqlFile(string connStr, string sqlFileNameWithoutExtension, string createdDbName)
+        public static StatusOfExecutedSqlCmd DBExecutorFromSqlFile(string connStr, string sqlFileName, string createdDbName)
         {
             try
             {
                 string setupStatusStr = "";
 
                 //read  sql file.
-                DirectoryInfo projectBinFolder = Directory.GetParent(Application.StartupPath);
-                string sqlFilePath = projectBinFolder.Parent.FullName + "\\Files\\SqlScript\\" + sqlFileNameWithoutExtension.Trim() + ".sql";
+                string sqlFilePath = Global.GetPath("\\Files\\SqlScript\\") + sqlFileName.Trim();
                 string sqlFileAllText = File.ReadAllText(sqlFilePath);
                 //sqlFileAllText input value for Regex.Spit()
                 //@"^\s*GO\s*$" ----> patern for Regex.Spit()
@@ -197,6 +197,7 @@ namespace WFA_DifferentSkills.AppClasses
                     catch (Exception ex)
                     {
                         ProblematicSqlCommand problemCmd = new ProblematicSqlCommand();
+                        problemCmd.SqlFileName = sqlFileName;
                         problemCmd.LineNoByPaternOrder = i;
                         if (!String.IsNullOrWhiteSpace(commands[i].ToString()))
                             problemCmd.SqlExpression = commands[i];
@@ -226,17 +227,43 @@ namespace WFA_DifferentSkills.AppClasses
                 return null;
             }
         }
+
+        public static StatusOfExecCodeFirst CodeFirstExecFromMngr(DbContext context, string query, string contextName )
+        {
+            StatusOfExecCodeFirst stt = new StatusOfExecCodeFirst();
+            stt.ContextName = contextName;
+            try
+            {
+                var result = context.Database.ExecuteSqlCommand(query);
+                stt.IsSuccess = "Successful";
+            }
+            catch
+            {
+                stt.IsSuccess = "Unsuccesful";
+            }
+            return stt;
+        }
     }
+
+    public class StatusOfExecCodeFirst
+    {
+        [DisplayName("Context Name")]
+        public string ContextName { get; set; }
+        [DisplayName("Is it successful?")]
+        public string IsSuccess { get; set; }
+    }//return
+
     public class ProblematicSqlCommand
     {
         public override string ToString()
         {
             return base.ToString();
         }
+        public string SqlFileName { get; set; }
         public int LineNoByPaternOrder { get; set; }
         public string SqlExpression { get; set; }
     }
-    //return parameter
+    
     public class StatusOfExecutedSqlCmd
     {
         public override string ToString()
@@ -249,6 +276,6 @@ namespace WFA_DifferentSkills.AppClasses
         public int ExecutedCmdCount { get; set; }
         public int UnexecutedCmdCount { get; set; }
         public string SetupStatusStr { get; set; }
-    }
-    
+    }//return
+
 }

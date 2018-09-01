@@ -73,6 +73,12 @@
     <Compile Include="AppForms\frmGithubApi.Designer.cs">
       <DependentUpon>frmGithubApi.cs</DependentUpon>
     </Compile>
+    <Compile Include="AppForms\frmJsonSkills.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForms\frmJsonSkills.Designer.cs">
+      <DependentUpon>frmJsonSkills.cs</DependentUpon>
+    </Compile>
     <Compile Include="AppForms\frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,6 +91,12 @@
     <Compile Include="AppForms\frmTemplate.Designer.cs">
       <DependentUpon>frmTemplate.cs</DependentUpon>
     </Compile>
+    <Compile Include="AppForms\frmXmlSkills.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForms\frmXmlSkills.Designer.cs">
+      <DependentUpon>frmXmlSkills.cs</DependentUpon>
+    </Compile>
     <Compile Include="ORM\GithubRepository.cs" />
     <Compile Include="ORM\GithubUser.cs" />
     <Compile Include="ORM\Manager\DatabaseContext.cs" />
@@ -96,11 +108,17 @@
     <EmbeddedResource Include="AppForms\frmGithubApi.resx">
       <DependentUpon>frmGithubApi.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\frmJsonSkills.resx">
+      <DependentUpon>frmJsonSkills.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AppForms\frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AppForms\frmTemplate.resx">
       <DependentUpon>frmTemplate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\frmXmlSkills.resx">
+      <DependentUpon>frmXmlSkills.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -110,6 +128,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -128,7 +147,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Files\Image\" />
     <Folder Include="Files\JSON\" />
     <Folder Include="Files\LOG\" />
     <Folder Include="Files\XML\" />
@@ -138,6 +156,9 @@
     <Content Include="Files\Descriptions\frmGithubApi.html" />
     <Content Include="Files\Descriptions\frmGithubApi_files\github.png" />
     <Content Include="Files\SqlScript\Northwind.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

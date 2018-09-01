@@ -58,7 +58,7 @@ namespace WFA_DifferentSkills.AppForms
                 //the database is checked... 
                 using (DatabaseContext db = new DatabaseContext())
                 {
-                    lblStatus.Text = "Veri tabanı kontrol ediliyor...";
+                    lblStatus.Text = "Checking the database...";
                     List<GithubUser> result = (from i in db.GithubUser
                                                where i.Login == queryText
                                                select i).ToList();
@@ -66,12 +66,12 @@ namespace WFA_DifferentSkills.AppForms
                 }
                 if (status != 0)
                 {
-                    lblStatus.Text = "Veri tabanından alınıyor...";
+                    lblStatus.Text = "Getting data from the database...";
                     GetUserAndRepo();
                 }
                 else
                 {
-                    lblStatus.Text = "Api'dan alınıyor...";
+                    lblStatus.Text = "Getting data from Github ...";
                     //insert from api to db.
                     using (DatabaseContext db = new DatabaseContext())
                     {
@@ -79,7 +79,7 @@ namespace WFA_DifferentSkills.AppForms
                         {
                             string repoUrl = "https://api.github.com/users/" + queryText + "/repos";
                             List<GithubRepoForJson> repos = Global.GetDeserializeJson<List<GithubRepoForJson>>(repoUrl);
-                            lblStatus.Text = "Veri tabanına kaydediliyor...";
+                            lblStatus.Text = "Saving data to the database...";
                             List<GithubRepository> reposForUser = new List<GithubRepository>();
                             foreach (GithubRepoForJson repo in repos)
                             {
@@ -103,20 +103,20 @@ namespace WFA_DifferentSkills.AppForms
                             db.GithubUser.Add(u);
                             db.SaveChanges();
                             //select from db
-                            lblStatus.Text = "Veri tabanından alınıyor...";
+                            lblStatus.Text = "Getting data from the database...";
                             GetUserAndRepo();
                         }
                         catch
                         {
-                            MessageBox.Show("Girmiş olduğunuz Github kullanıcısı bulunamamaktadır.");
-                            lblStatus.Text = "İşlem Başarısız...";
+                            MessageBox.Show("Error! Github user was not found. Please try again...");
+                            lblStatus.Text = "Unsuccessful...";
                         }
                     }
                 }
             }
             else
             {
-                MessageBox.Show("Lütfen bir Github kullanıcı adı giriniz...");
+                MessageBox.Show("Warning! Please enter a Github \"Login Name\"...");
             }
         }
 
@@ -179,18 +179,19 @@ namespace WFA_DifferentSkills.AppForms
                     //repo select
                     dgvRepos.DataSource = user.Repository.ToList();
                     //settings
-                    dgvRepos.Columns["FullName"].HeaderText = "Repo Adı";
-                    dgvRepos.Columns["CreatedAt"].HeaderText = "Oluşturulma Tarihi";
-                    dgvRepos.Columns["User"].HeaderText = "Repo'yu İndir";// User column was used as a button.
+                    dgvRepos.Columns["FullName"].HeaderText = "Repository Name";
+                    dgvRepos.Columns["CreatedAt"].HeaderText = "Created At";
+                    dgvRepos.Columns["User"].HeaderText = "Download As Zip";// User column was used as a button.
                     dgvRepos.Columns["Id"].Visible = false;
                     dgvRepos.Columns["DownloadUrl"].Visible = false;
-                    lblStatus.Text = "Tamamlandı...";
+                    //dgvRepos.Columns["CreatedAt"].SortMode= DataGridViewColumnSortMode.Automatic;
+                    lblStatus.Text = "Completed...";
 
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Hata: (İnternet bağlantınızı kontrol ediniz!)- " + ex.Message);
-                    lblStatus.Text = "İşlem Başarısız...";
+                    MessageBox.Show("Error! Please check your internet connection..." + Environment.NewLine+"Exception: "+ex.Message);
+                    lblStatus.Text = "Operation failed!";
                 }
             }
         }
