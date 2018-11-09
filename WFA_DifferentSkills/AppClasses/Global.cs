@@ -28,10 +28,17 @@ namespace WFA_DifferentSkills.AppClasses
         /// <param name="wb">This parameter represent WebBrowser control in Windows Form Tools.</param>
         public static void WebBrowserFill(string htmlFileName, WebBrowser wb)
         {
-            wb.Visible = true;
-            string descriptionFolderPath = Global.GetPath("\\Files\\Descriptions");
-            string descriptionFileUrl = descriptionFolderPath + "\\" + htmlFileName;
-            wb.Url = new Uri(descriptionFileUrl);
+            try
+            {
+                wb.Visible = true;
+                string descriptionFolderPath = Global.GetPath("\\Files\\Descriptions");
+                string descriptionFileUrl = descriptionFolderPath + "\\" + htmlFileName;
+                wb.Url = new Uri(descriptionFileUrl);
+            }
+            catch
+            {
+                return;
+            }
         }
         /// <summary>
         /// This method converts serialize data to deserialize.

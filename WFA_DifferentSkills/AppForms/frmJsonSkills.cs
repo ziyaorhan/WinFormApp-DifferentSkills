@@ -25,7 +25,7 @@ namespace WFA_DifferentSkills.AppForms
             InitializeComponent();
             this.MdiParent = parent;
             this.Text = "JSON Operations";
-            Global.WebBrowserFill("", this.wbDescription);
+            Global.WebBrowserFill("frmJsonSkills.html", this.wbDescription);
 
             //for this project
             persons = new List<JsonTemlate>();

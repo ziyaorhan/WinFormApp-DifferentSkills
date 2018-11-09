@@ -35,7 +35,6 @@ namespace WFA_DifferentSkills.AppForms
                 }
             }
         }
-
         #region githubApiToolStripMenuItem methods
         private void githubApiToolStripMenuItem_MouseEnter(object sender, EventArgs e)
         {
@@ -89,7 +88,7 @@ namespace WFA_DifferentSkills.AppForms
         {
             if (Global.wbMainVisibility)
             {
-                Global.WebBrowserFill("", this.wbMain);
+                Global.WebBrowserFill("frmXmlSkills.html", this.wbMain);
                 this.wbMain.Visible = true;
             }
         }
@@ -113,7 +112,7 @@ namespace WFA_DifferentSkills.AppForms
         {
             if (Global.wbMainVisibility)
             {
-                Global.WebBrowserFill("", this.wbMain);
+                Global.WebBrowserFill("frmJsonSkills.html", this.wbMain);
                 this.wbMain.Visible = true;
             }
         }
@@ -129,7 +128,29 @@ namespace WFA_DifferentSkills.AppForms
             child.Show();
             Global.wbMainVisibility = false;
             wbMain.Visible = false;
-        } 
+        }
         #endregion
+
+        private void eULERTYPEToolStripMenuItem_MouseEnter(object sender, EventArgs e)
+        {
+            if (Global.wbMainVisibility)
+            {
+                Global.WebBrowserFill("frmEulerType.html", this.wbMain);
+                this.wbMain.Visible = true;
+            }
+        }
+
+        private void eULERTYPEToolStripMenuItem_MouseLeave(object sender, EventArgs e)
+        {
+            this.wbMain.Visible = false;
+        }
+
+        private void eULERTYPEToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmEulerType child = new frmEulerType(this);
+            child.Show();
+            Global.wbMainVisibility = false;
+            wbMain.Visible = false;
+        }
     }
 }

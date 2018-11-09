@@ -67,6 +67,12 @@
     <Compile Include="AppForms\frmDbCreator.Designer.cs">
       <DependentUpon>frmDbCreator.cs</DependentUpon>
     </Compile>
+    <Compile Include="AppForms\frmEulerType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForms\frmEulerType.Designer.cs">
+      <DependentUpon>frmEulerType.cs</DependentUpon>
+    </Compile>
     <Compile Include="AppForms\frmGithubApi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +110,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AppForms\frmDbCreator.resx">
       <DependentUpon>frmDbCreator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\frmEulerType.resx">
+      <DependentUpon>frmEulerType.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AppForms\frmGithubApi.resx">
       <DependentUpon>frmGithubApi.cs</DependentUpon>
@@ -153,8 +162,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Files\Descriptions\frmDbCreator.html" />
+    <Content Include="Files\Descriptions\frmEulerType.html" />
     <Content Include="Files\Descriptions\frmGithubApi.html" />
     <Content Include="Files\Descriptions\frmGithubApi_files\github.png" />
+    <Content Include="Files\Descriptions\frmJsonSkills.html" />
+    <Content Include="Files\Descriptions\frmXmlSkills.html" />
     <Content Include="Files\SqlScript\Northwind.sql" />
   </ItemGroup>
   <ItemGroup>

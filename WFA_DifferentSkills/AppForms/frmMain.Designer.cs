@@ -34,6 +34,7 @@
             this.githubApiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.xMLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.jSONToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.eULERTYPEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.wbMain = new System.Windows.Forms.WebBrowser();
             this.menuStripMain.SuspendLayout();
             this.SuspendLayout();
@@ -44,7 +45,8 @@
             this.createDbToolStripMenuItem,
             this.aPIToolStripMenuItem,
             this.xMLToolStripMenuItem,
-            this.jSONToolStripMenuItem});
+            this.jSONToolStripMenuItem,
+            this.eULERTYPEToolStripMenuItem});
             this.menuStripMain.Location = new System.Drawing.Point(0, 0);
             this.menuStripMain.Name = "menuStripMain";
             this.menuStripMain.Size = new System.Drawing.Size(950, 24);
@@ -54,7 +56,7 @@
             // createDbToolStripMenuItem
             // 
             this.createDbToolStripMenuItem.Name = "createDbToolStripMenuItem";
-            this.createDbToolStripMenuItem.Size = new System.Drawing.Size(79, 20);
+            this.createDbToolStripMenuItem.Size = new System.Drawing.Size(78, 20);
             this.createDbToolStripMenuItem.Text = "CREATE DB";
             this.createDbToolStripMenuItem.Click += new System.EventHandler(this.createDbToolStripMenuItem_Click);
             this.createDbToolStripMenuItem.MouseEnter += new System.EventHandler(this.createDbToolStripMenuItem_MouseEnter);
@@ -65,14 +67,14 @@
             this.aPIToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.githubApiToolStripMenuItem});
             this.aPIToolStripMenuItem.Name = "aPIToolStripMenuItem";
-            this.aPIToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
-            this.aPIToolStripMenuItem.Text = "API";
+            this.aPIToolStripMenuItem.Size = new System.Drawing.Size(45, 20);
+            this.aPIToolStripMenuItem.Text = ">API";
             // 
             // githubApiToolStripMenuItem
             // 
             this.githubApiToolStripMenuItem.BackColor = System.Drawing.SystemColors.Control;
             this.githubApiToolStripMenuItem.Name = "githubApiToolStripMenuItem";
-            this.githubApiToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.githubApiToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
             this.githubApiToolStripMenuItem.Text = "Github Api";
             this.githubApiToolStripMenuItem.Click += new System.EventHandler(this.githubApiToolStripMenuItem_Click);
             this.githubApiToolStripMenuItem.MouseEnter += new System.EventHandler(this.githubApiToolStripMenuItem_MouseEnter);
@@ -81,7 +83,7 @@
             // xMLToolStripMenuItem
             // 
             this.xMLToolStripMenuItem.Name = "xMLToolStripMenuItem";
-            this.xMLToolStripMenuItem.Size = new System.Drawing.Size(117, 20);
+            this.xMLToolStripMenuItem.Size = new System.Drawing.Size(116, 20);
             this.xMLToolStripMenuItem.Text = "XML OPERATIONS";
             this.xMLToolStripMenuItem.Click += new System.EventHandler(this.xMLToolStripMenuItem_Click);
             this.xMLToolStripMenuItem.MouseEnter += new System.EventHandler(this.xMLToolStripMenuItem_MouseEnter);
@@ -90,11 +92,20 @@
             // jSONToolStripMenuItem
             // 
             this.jSONToolStripMenuItem.Name = "jSONToolStripMenuItem";
-            this.jSONToolStripMenuItem.Size = new System.Drawing.Size(121, 20);
+            this.jSONToolStripMenuItem.Size = new System.Drawing.Size(120, 20);
             this.jSONToolStripMenuItem.Text = "JSON OPERATIONS";
             this.jSONToolStripMenuItem.Click += new System.EventHandler(this.jSONToolStripMenuItem_Click);
             this.jSONToolStripMenuItem.MouseEnter += new System.EventHandler(this.jSONToolStripMenuItem_MouseEnter);
             this.jSONToolStripMenuItem.MouseLeave += new System.EventHandler(this.jSONToolStripMenuItem_MouseLeave);
+            // 
+            // eULERTYPEToolStripMenuItem
+            // 
+            this.eULERTYPEToolStripMenuItem.Name = "eULERTYPEToolStripMenuItem";
+            this.eULERTYPEToolStripMenuItem.Size = new System.Drawing.Size(153, 20);
+            this.eULERTYPEToolStripMenuItem.Text = "EULER TYPE ALGORITHM";
+            this.eULERTYPEToolStripMenuItem.Click += new System.EventHandler(this.eULERTYPEToolStripMenuItem_Click);
+            this.eULERTYPEToolStripMenuItem.MouseEnter += new System.EventHandler(this.eULERTYPEToolStripMenuItem_MouseEnter);
+            this.eULERTYPEToolStripMenuItem.MouseLeave += new System.EventHandler(this.eULERTYPEToolStripMenuItem_MouseLeave);
             // 
             // wbMain
             // 
@@ -135,5 +146,6 @@
         private System.Windows.Forms.ToolStripMenuItem xMLToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem jSONToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem createDbToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem eULERTYPEToolStripMenuItem;
     }
 }

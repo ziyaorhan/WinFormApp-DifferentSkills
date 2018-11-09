@@ -144,6 +144,7 @@
             this.btnClearList.TabIndex = 11;
             this.btnClearList.Text = "Clear List";
             this.btnClearList.UseVisualStyleBackColor = true;
+            this.btnClearList.Click += new System.EventHandler(this.btnClearList_Click);
             // 
             // btnListFromJsonFile
             // 
@@ -155,6 +156,7 @@
             this.btnListFromJsonFile.TabIndex = 8;
             this.btnListFromJsonFile.Text = "Lists";
             this.btnListFromJsonFile.UseVisualStyleBackColor = true;
+            this.btnListFromJsonFile.Click += new System.EventHandler(this.btnListFromJsonFile_Click);
             // 
             // cbJsonFiles
             // 
@@ -196,6 +198,7 @@
             this.btnCreateJsonFile.TabIndex = 1;
             this.btnCreateJsonFile.Text = "Create ";
             this.btnCreateJsonFile.UseVisualStyleBackColor = true;
+            this.btnCreateJsonFile.Click += new System.EventHandler(this.btnCreateJsonFile_Click);
             // 
             // txtJsonFileName
             // 
@@ -283,6 +286,7 @@
             this.btnClearInputs.TabIndex = 6;
             this.btnClearInputs.Text = "Clear Inputs";
             this.btnClearInputs.UseVisualStyleBackColor = true;
+            this.btnClearInputs.Click += new System.EventHandler(this.btnClearInputs_Click);
             // 
             // label4
             // 
@@ -303,6 +307,7 @@
             this.btnAddToList.TabIndex = 5;
             this.btnAddToList.Text = "Add To List";
             this.btnAddToList.UseVisualStyleBackColor = true;
+            this.btnAddToList.Click += new System.EventHandler(this.btnAddToList_Click);
             // 
             // txtMotherName
             // 

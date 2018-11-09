@@ -25,7 +25,7 @@ namespace WFA_DifferentSkills.AppForms
             //for initial
             this.MdiParent = parent;
             this.Text = "XML Operations";
-            Global.WebBrowserFill("", this.wbDescription);
+            Global.WebBrowserFill("frmXmlSkills.html", this.wbDescription);
 
             //for this project
             string[] cbNorthTableItems = { "Categories", "Employees", "Orders", "Products" };
