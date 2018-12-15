@@ -35,6 +35,7 @@
             this.xMLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.jSONToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eULERTYPEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.hTMLPARSEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.wbMain = new System.Windows.Forms.WebBrowser();
             this.menuStripMain.SuspendLayout();
             this.SuspendLayout();
@@ -46,7 +47,8 @@
             this.aPIToolStripMenuItem,
             this.xMLToolStripMenuItem,
             this.jSONToolStripMenuItem,
-            this.eULERTYPEToolStripMenuItem});
+            this.eULERTYPEToolStripMenuItem,
+            this.hTMLPARSEToolStripMenuItem});
             this.menuStripMain.Location = new System.Drawing.Point(0, 0);
             this.menuStripMain.Name = "menuStripMain";
             this.menuStripMain.Size = new System.Drawing.Size(950, 24);
@@ -107,6 +109,15 @@
             this.eULERTYPEToolStripMenuItem.MouseEnter += new System.EventHandler(this.eULERTYPEToolStripMenuItem_MouseEnter);
             this.eULERTYPEToolStripMenuItem.MouseLeave += new System.EventHandler(this.eULERTYPEToolStripMenuItem_MouseLeave);
             // 
+            // hTMLPARSEToolStripMenuItem
+            // 
+            this.hTMLPARSEToolStripMenuItem.Name = "hTMLPARSEToolStripMenuItem";
+            this.hTMLPARSEToolStripMenuItem.Size = new System.Drawing.Size(139, 20);
+            this.hTMLPARSEToolStripMenuItem.Text = "TWITTER HTML PARSE";
+            this.hTMLPARSEToolStripMenuItem.Click += new System.EventHandler(this.hTMLPARSEToolStripMenuItem_Click);
+            this.hTMLPARSEToolStripMenuItem.MouseEnter += new System.EventHandler(this.hTMLPARSEToolStripMenuItem_MouseEnter);
+            this.hTMLPARSEToolStripMenuItem.MouseLeave += new System.EventHandler(this.hTMLPARSEToolStripMenuItem_MouseLeave);
+            // 
             // wbMain
             // 
             this.wbMain.Dock = System.Windows.Forms.DockStyle.Right;
@@ -147,5 +158,6 @@
         private System.Windows.Forms.ToolStripMenuItem jSONToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem createDbToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem eULERTYPEToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem hTMLPARSEToolStripMenuItem;
     }
 }

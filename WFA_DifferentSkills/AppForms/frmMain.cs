@@ -131,6 +131,7 @@ namespace WFA_DifferentSkills.AppForms
         }
         #endregion
 
+        #region eULERTYPEToolStripMenuItem
         private void eULERTYPEToolStripMenuItem_MouseEnter(object sender, EventArgs e)
         {
             if (Global.wbMainVisibility)
@@ -152,5 +153,31 @@ namespace WFA_DifferentSkills.AppForms
             Global.wbMainVisibility = false;
             wbMain.Visible = false;
         }
+        #endregion
+
+        #region hTMLPARSEToolStripMenuItem
+        private void hTMLPARSEToolStripMenuItem_MouseEnter(object sender, EventArgs e)
+        {
+            if (Global.wbMainVisibility)
+            {
+                Global.WebBrowserFill("frmHtmlParse.html", this.wbMain);
+                wbMain.Visible = true;
+            }
+        }
+
+        private void hTMLPARSEToolStripMenuItem_MouseLeave(object sender, EventArgs e)
+        {
+            this.wbMain.Visible = false;
+        }
+
+        private void hTMLPARSEToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmHtmlParse child = new frmHtmlParse(this);
+            child.Show();
+            Global.wbMainVisibility = false;
+            wbMain.Visible = false;
+        } 
+        #endregion
+
     }
 }

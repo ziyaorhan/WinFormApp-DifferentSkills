@@ -38,6 +38,9 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="HtmlAgilityPack, Version=1.8.11.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlAgilityPack.1.8.11\lib\Net45\HtmlAgilityPack.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -79,6 +82,12 @@
     <Compile Include="AppForms\frmGithubApi.Designer.cs">
       <DependentUpon>frmGithubApi.cs</DependentUpon>
     </Compile>
+    <Compile Include="AppForms\frmHtmlParse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForms\frmHtmlParse.Designer.cs">
+      <DependentUpon>frmHtmlParse.cs</DependentUpon>
+    </Compile>
     <Compile Include="AppForms\frmJsonSkills.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +125,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AppForms\frmGithubApi.resx">
       <DependentUpon>frmGithubApi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\frmHtmlParse.resx">
+      <DependentUpon>frmHtmlParse.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AppForms\frmJsonSkills.resx">
       <DependentUpon>frmJsonSkills.cs</DependentUpon>
@@ -165,9 +177,12 @@
     <Content Include="Files\Descriptions\frmEulerType.html" />
     <Content Include="Files\Descriptions\frmGithubApi.html" />
     <Content Include="Files\Descriptions\frmGithubApi_files\github.png" />
+    <Content Include="Files\Descriptions\frmHtmlParse.html" />
+    <Content Include="Files\Descriptions\frmHtmlParse_files\iconfinder_twitter_circle_294709.png" />
     <Content Include="Files\Descriptions\frmJsonSkills.html" />
     <Content Include="Files\Descriptions\frmXmlSkills.html" />
     <Content Include="Files\SqlScript\Northwind.sql" />
+    <Content Include="Files\Temporary Files\twitter.html" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
