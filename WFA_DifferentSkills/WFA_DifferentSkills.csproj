@@ -63,6 +63,9 @@
     <Compile Include="AppClasses\GithubUserForJson.cs" />
     <Compile Include="AppClasses\Global.cs" />
     <Compile Include="AppClasses\GithubRepoForJson.cs" />
+    <Compile Include="AppClasses\MethodsForAllForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="AppClasses\Validation.cs" />
     <Compile Include="AppForms\frmDbCreator.cs">
       <SubType>Form</SubType>

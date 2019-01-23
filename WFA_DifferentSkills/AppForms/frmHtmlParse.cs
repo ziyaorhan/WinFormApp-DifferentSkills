@@ -104,7 +104,7 @@ namespace WFA_DifferentSkills.AppForms
                         lblFollowing.Text = newAccount.Following;
                         lblLike.Text = newAccount.Like;
                         string htmlBody = "<!DOCTYPE html><html><head><style>body {font-family:verdana;}h2 {color: gray;}p {color:black;font-size:14px;border:1px dotted gray;padding: 5px;}</style></head><body><h2>";
-                        htmlBody += TrimeIfNotNull(newAccount.Name);
+                        htmlBody += ConvertToUtf8(TrimeIfNotNull(newAccount.Name));
                         htmlBody += "-Tweets</h2>";
                         foreach (string content in newAccount.TweetContent)
                         {
@@ -124,7 +124,7 @@ namespace WFA_DifferentSkills.AppForms
             }
             catch (Exception)
             {
-               //MessageBox.Show("There was a problem." + Environment.NewLine + "Exception: " + ex.Message);
+                //MessageBox.Show("There was a problem." + Environment.NewLine + "Exception: " + ex.Message);
                 toolStripStatusLabel1.Text = "An unexpected error has occurred. please try again!";
                 toolStripStatusLabel1.BackColor = Color.Red;
             }
@@ -245,10 +245,60 @@ namespace WFA_DifferentSkills.AppForms
             }
             TweetContent = utf8Contents;
         }
-        public string PictureUrl { get; set; }
-        public string Name { get; set; }
-        public string Location { get; set; }
-        public string Link { get; set; }
+        private string pictureUrl;
+
+        public string PictureUrl
+        {
+            get { return pictureUrl; }
+            set
+            {
+                if (value != null)
+                    pictureUrl = value;
+                else
+                    pictureUrl = "";
+            }
+        }
+
+        private string name;
+        public string Name
+        {
+            get { return name; }
+            set
+            {
+                if (value != null)
+                    name = value;
+                else
+                    name = "";
+            }
+        }
+
+        private string location;
+
+        public string Location
+        {
+            get { return location; }
+            set
+            {
+                if (value != null)
+                    location = value;
+                else
+                    location = "";
+            }
+        }
+
+        private string link;
+
+        public string Link
+        {
+            get { return link; }
+            set
+            {
+                if (value != null)
+                    link = value;
+                else
+                    link = "";
+            }
+        }
         public string Tweets { get; set; }
         public string Following { get; set; }
         public string Followers { get; set; }
